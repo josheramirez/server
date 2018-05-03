@@ -1,0 +1,8 @@
+//- extens carga la otra vista primero
+extends ./layout.jade
+block contenido
+	//- varias clases en un div
+	div(class="col-md-8 remove-float center-block text-center big-top-center")
+		h2 Bienvenido a DataApp
+		a(href="/login" class="right-space") Iniciar sesion
+		a(href="/signup" class="right-space") Registrarce

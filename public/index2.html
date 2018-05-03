@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Temperature with Nodejs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style media="screen">
+    html, body {
+  height:100%;
+}
+body {
+  display:flex;
+  align-items:center;
+  background: #34495e;
+}
+    </style>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-center align-self-center">
+          <div class="card">
+            <h1 id="temperature" class="display-1 p-4"></h1>
+          </div>
+      </div>
+    </div>
+     <div id="chart_div" style="width: 400px; height: 120px;"></div>
+    <canvas id="demo"></canvas>
+
+    <script src="socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="waterbubble.js"></script>
+    <script type="text/javascript">
+      $('#demo').waterbubble({
+
+  // bubble size
+  radius: 100,
+
+  // border width
+  lineWidth: undefined,
+
+  // data to present
+  data: 0.5,
+
+  // color of the water bubble
+  waterColor: 'rgba(25, 139, 201, 1)',
+
+  // text color
+  textColor: 'rgba(255, 255, 255, .6)',
+
+  // custom font family
+  font: '',
+
+  // show wave
+  wave: false,
+
+  // custom text displayed inside the water bubble
+  txt: "%",
+
+  // enable water fill animation
+  animation: false,
+  
+});
+
+    </script>
+
+  </body>
+</html>
